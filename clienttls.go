@@ -26,7 +26,9 @@ func main() {
 
 	// Setup HTTPS client
 	tlsConfig := &tls.Config{
-		RootCAs: caCertPool,
+		RootCAs:    caCertPool,
+		MinVersion: tls.VersionTLS10,
+		MaxVersion: tls.VersionTLS12,
 	}
 
 	tlsConfig.BuildNameToCertificate()
