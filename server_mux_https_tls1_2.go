@@ -9,7 +9,6 @@ import (
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", HelloServer)
-	mux.HandleFunc("/users", users)
 	cfg := &tls.Config{
 		MinVersion:               tls.VersionTLS12,
 		CurvePreferences:         []tls.CurveID{tls.CurveP521, tls.CurveP384, tls.CurveP256},

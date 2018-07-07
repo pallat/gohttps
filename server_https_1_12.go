@@ -15,7 +15,6 @@ func main() {
 		// fmt.Fprintf(w, "This is an example server.\n")
 		// io.WriteString(w, "This is an example server.\n")
 	})
-	http.HandleFunc("/users", users)
 
 	err := s.ListenAndServeTLS("local.crt", "server.key")
 	if err != nil {
